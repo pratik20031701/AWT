@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+    <h2>{{ heading }}</h2>
+    <p>
+        This basic website uses Flask routes to render multiple pages with shared
+        navigation and layout.
+    </p>
+    <p>
+        Try visiting <strong>/about</strong>, <strong>/services</strong>,
+        <strong>/contact</strong>, or a dynamic route like
+        <strong>/user/nishan</strong>.
+    </p>
+</section>
+{% endblock %}

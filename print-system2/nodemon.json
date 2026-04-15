@@ -1,0 +1,19 @@
+{
+  "watch": [
+    "server.js",
+    "config",
+    "controllers",
+    "routes",
+    "services",
+    "views",
+    "public"
+  ],
+  "ext": "js,json,html,css",
+  "ignore": [
+    "node_modules",
+    "uploads",
+    "database",
+    "temp_prints"
+  ],
+  "legacyWatch": true
+}

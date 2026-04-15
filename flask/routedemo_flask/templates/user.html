@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="card">
+    <h2>{{ heading }}</h2>
+    <p>
+        This is a dynamic route example. Flask captured the URL value and passed
+        <strong>{{ username }}</strong> into the template.
+    </p>
+</section>
+{% endblock %}

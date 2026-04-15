@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="card">
+    <h2>{{ heading }}</h2>
+    <div class="grid">
+        <article>
+            <h3>Static Routing</h3>
+            <p>Create pages like Home, About, and Contact using simple routes.</p>
+        </article>
+        <article>
+            <h3>Dynamic Routing</h3>
+            <p>Pass values in the URL, such as a username, and display them.</p>
+        </article>
+        <article>
+            <h3>Template Reuse</h3>
+            <p>Use a base layout to keep the website consistent across pages.</p>
+        </article>
+    </div>
+</section>
+{% endblock %}

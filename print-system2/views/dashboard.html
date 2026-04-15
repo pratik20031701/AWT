@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop Dashboard</title>
+  <link rel="stylesheet" href="/public/css/style.css" />
+</head>
+<body class="dashboard-body">
+
+<div class="dashboard-wrapper">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">🖨️ PrintDesk</div>
+    <div class="sidebar-shop" id="sidebarShopName">Loading...</div>
+    <nav>
+      <a class="nav-link active" onclick="showTab('payments')">💰 Pending Payments</a>
+      <a class="nav-link" onclick="showTab('queue')">📋 Job Queue</a>
+      <a class="nav-link" onclick="showTab('settings')">⚙️ Settings</a>
+      <a class="nav-link" onclick="logout()" style="color: rgba(255,255,255,0.6);">🚪 Logout</a>
+    </nav>
+  </aside>
+
+  <!-- Main content -->
+  <main class="main-content">
+
+    <!-- Stats bar -->
+    <div class="stats-bar">
+      <div class="stat-card">
+        <div class="stat-val" id="statPending">0</div>
+        <div class="stat-label">Pending Payments</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val" id="statQueue">0</div>
+        <div class="stat-label">Pending Jobs</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val" id="statDone">0</div>
+        <div class="stat-label">Completed Today</div>
+      </div>
+    </div>
+
+    <!-- Tab: Pending Payments -->
+    <section id="tab-payments">
+      <div class="section-header">
+        <h2>💰 Pending Payments</h2>
+        <button class="btn-refresh" onclick="loadAll()">🔄 Refresh</button>
+      </div>
+      <div id="pendingList">
+        <div class="empty-state">⏳ No pending payments</div>
+      </div>
+    </section>
+
+    <!-- Tab: Job Queue -->
+    <section id="tab-queue" style="display:none;">
+      <div class="section-header">
+        <h2>📋 Job Queue</h2>
+        <button class="btn-refresh" onclick="loadQueue()">🔄 Refresh</button>
+      </div>
+      <div id="queueList">
+        <div class="empty-state">✅ No approved jobs yet</div>
+      </div>
+    </section>
+
+    <!-- Tab: Settings -->
+    <section id="tab-settings" style="display:none;">
+      <h2>⚙️ Settings</h2>
+      <div class="settings-card">
+        <h3>Shop Details</h3>
+        <div id="shopDetails">Loading...</div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="/public/js/dashboard.js"></script>
+</body>
+</html>
